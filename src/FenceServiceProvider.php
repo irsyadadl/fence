@@ -25,6 +25,7 @@ class FenceServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
+            __DIR__.'/View/Components/Layouts' => app_path('View/Components/Layouts'),
             __DIR__.'/../resources/views/auth' => resource_path('views/auth'),
             __DIR__.'/../resources/views/layouts' => resource_path('views/layouts'),
         ]);
