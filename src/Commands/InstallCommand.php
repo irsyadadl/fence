@@ -38,6 +38,6 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        Storage::copy(__DIR__ . '/vendor/irsyadadl/fence/package.json', __DIR__);
+        Storage::copy(__DIR__ . '/../../fence/package.json', __DIR__);
     }
 }
