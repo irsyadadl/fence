@@ -1,7 +1,7 @@
 # fence
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Travis](https://img.shields.io/travis/irsyadadl/fence.svg?style=flat-square)]()
+<!-- [![Travis](https://img.shields.io/travis/irsyadadl/fence.svg?style=flat-square)]() -->
 [![Total Downloads](https://img.shields.io/packagist/dt/irsyadadl/fence.svg?style=flat-square)](https://packagist.org/packages/irsyadadl/fence)
 
 ## Install
