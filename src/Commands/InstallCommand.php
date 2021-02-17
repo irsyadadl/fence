@@ -39,5 +39,7 @@ class InstallCommand extends Command
     {
         copy(__DIR__ . '/../../package.json', base_path('package.json'));
         $this->call('vendor:publish --provider=Irsyadadl\Fence\FenceServiceProvider.php');
+        $this->info("Your authentication views has been setup by fence.");
+        $this->info("Please run `yarn && yarn dev`");
     }
 }
