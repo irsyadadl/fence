@@ -57,7 +57,10 @@ class InstallCommand extends Command
         copy(__DIR__.'/../../stubs/webpack.mix.js', base_path('webpack.mix.js'));
         copy(__DIR__.'/../../stubs/resources/css/app.css', resource_path('css/app.css'));
         copy(__DIR__.'/../../stubs/resources/js/app.js', resource_path('js/app.js'));
+
+        // Copy the FortifyServiceProvider file
         copy(__DIR__.'/../../stubs/FortifyServiceProvider.php', app_path('Providers/FortifyServiceProvider.php'));
+
         $this->call('vendor:publish --provider=Irsyadadl\Fence\FenceServiceProvider');
         $this->info('Fence scaffolding installed successfully.');
         $this->comment('Please execute the "yarn && yarn run dev" command to build your assets.');
