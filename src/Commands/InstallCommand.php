@@ -3,7 +3,6 @@
 namespace Irsyadadl\Fence\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Storage;
 
 class InstallCommand extends Command
 {
@@ -38,6 +37,6 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        Storage::copy(__DIR__ . '/../../fence/package.json', base_path('package.json'));
+        copy(__DIR__ . '/../../package.json', base_path('package.json'));
     }
 }
