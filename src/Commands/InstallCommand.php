@@ -1,6 +1,7 @@
 <?php
 
 namespace Irsyadadl\Fence\Commands;
+
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 
@@ -55,8 +56,8 @@ class InstallCommand extends Command
         // Tailwind / Webpack...
         copy(__DIR__.'/../../stubs/tailwind.config.js', base_path('tailwind.config.js'));
         copy(__DIR__.'/../../stubs/webpack.mix.js', base_path('webpack.mix.js'));
-        copy(__DIR__.'/../../stubs/resources/css/app.css', resource_path('css/app.css'));
-        copy(__DIR__.'/../../stubs/resources/js/app.js', resource_path('js/app.js'));
+        copy(__DIR__.'/../../stubs/resources/css/min.css', resource_path('css/min.css'));
+        copy(__DIR__.'/../../stubs/resources/js/min.js', resource_path('js/min.js'));
 
         // Copy the FortifyServiceProvider file
         copy(__DIR__.'/../../stubs/FortifyServiceProvider.php', app_path('Providers/FortifyServiceProvider.php'));

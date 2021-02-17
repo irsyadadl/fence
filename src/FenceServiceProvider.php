@@ -4,6 +4,7 @@ namespace Irsyadadl\Fence;
 
 use Illuminate\Support\ServiceProvider;
 use Irsyadadl\Fence\Commands\InstallCommand;
+use Laravel\Fortify\FortifyServiceProvider;
 
 class FenceServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,10 @@ class FenceServiceProvider extends ServiceProvider
         if (! $this->app->runningInConsole()) {
             return;
         }
+
+        $this->publishes([
+            FortifyServiceProvider::class,
+        ]);
 
         $this->commands([
             InstallCommand::class,
