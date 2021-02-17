@@ -1,35 +1,12 @@
-# fence
+<p align="center"><img src="/art/logo.svg" alt="Logo Laravel Breeze"></p>
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-<!-- [![Travis](https://img.shields.io/travis/irsyadadl/fence.svg?style=flat-square)]() -->
+[![Travis](https://img.shields.io/travis/irsyadadl/fence.svg?style=flat-square)]()
 [![Total Downloads](https://img.shields.io/packagist/dt/irsyadadl/fence.svg?style=flat-square)](https://packagist.org/packages/irsyadadl/fence)
+
+## Introduction
+Fence is a package for authentication views using Laravel fortify package! It using tailwind css!
 
 ## Install
 `composer require irsyadadl/fence`
-
-## Usage
-Write a few lines about the usage of this package.
-
-## Testing
-Run the tests with:
-
-``` bash
-vendor/bin/phpunit
-```
-
-## Changelog
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Contributing
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Credits
-
-- [irsyadadl](https://github.com/irsyadadl)
-- [All Contributors](https://github.com/irsyadadl/fence/contributors)
-
-## Security
-If you discover any security-related issues, please email irsyad@parsinta.com instead of using the issue tracker.
-
-## License
-The MIT License (MIT). Please see [License File](/LICENSE.md) for more information.
+`artisan vendor:publish`
