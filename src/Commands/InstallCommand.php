@@ -61,7 +61,6 @@ class InstallCommand extends Command
         // Copy the FortifyServiceProvider file
         copy(__DIR__.'/../../stubs/FortifyServiceProvider.php', app_path('Providers/FortifyServiceProvider.php'));
 
-        $this->call('vendor:publish --provider=Irsyadadl\Fence\FenceServiceProvider');
         $this->info('Fence scaffolding installed successfully.');
         $this->comment('Please execute the "yarn && yarn run dev" command to build your assets.');
     }
