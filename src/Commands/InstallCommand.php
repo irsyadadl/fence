@@ -38,5 +38,6 @@ class InstallCommand extends Command
     public function handle()
     {
         copy(__DIR__ . '/../../package.json', base_path('package.json'));
+        $this->call('vendor:publish --provider=Irsyadadl\Fence\FenceServiceProvider.php');
     }
 }
