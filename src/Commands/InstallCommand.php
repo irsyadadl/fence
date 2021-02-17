@@ -59,6 +59,11 @@ class InstallCommand extends Command
         copy(__DIR__.'/../../stubs/resources/css/min.css', resource_path('css/min.css'));
         copy(__DIR__.'/../../stubs/resources/js/min.js', resource_path('js/min.js'));
 
+        // Blade...
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/views/auth', resource_path('views/auth'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/views/layouts', resource_path('views/layouts'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/views/components', resource_path('views/components'));
+
         // Copy the FortifyServiceProvider file
         copy(__DIR__.'/../../stubs/FortifyServiceProvider.php', app_path('Providers/FortifyServiceProvider.php'));
 
