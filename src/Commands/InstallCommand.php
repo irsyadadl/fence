@@ -83,7 +83,7 @@ class InstallCommand extends Command
         $this->info('🔥 Fence scaffolding installed successfully.');
         // $this->info('🔥 Please tell me if you like it');
         // $this->info('@irsyadadl');
-        $this->comment('‼️ Please execute the "yarn && yarn run dev" command to build your assets.');
+        $this->comment('‼️  Please execute the "yarn && yarn run dev" command to build your assets.');
     }
 
 
