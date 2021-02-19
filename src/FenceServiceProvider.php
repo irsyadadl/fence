@@ -28,13 +28,6 @@ class FenceServiceProvider extends ServiceProvider
         if (! $this->app->runningInConsole()) {
             return;
         }
-        $this->mergeConfigFrom(
-            __DIR__.'/../config/fence.php', 'app.providers'
-        );
-
-        $this->publishes([
-            FortifyServiceProvider::class,
-        ]);
 
         $this->commands([
             InstallCommand::class,

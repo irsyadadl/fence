@@ -2,6 +2,7 @@
 
 namespace Irsyadadl\Fence\Commands;
 
+use Illuminate\Support\Str;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 
@@ -49,9 +50,18 @@ class InstallCommand extends Command
             ] + $packages;
         });
 
+        $this->callSilent('vendor:publish', ['--tag' => 'fortify-config', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'fortify-support', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'fortify-migrations', '--force' => true]);
+        $this->installServiceProviderAfter('RouteServiceProvider', 'FortifyServiceProvider');
+
         // Components...
         (new Filesystem)->ensureDirectoryExists(app_path('View/Components'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/App/View/Components', app_path('View/Components'));
+
+
+        // Controller...
+        copy(__DIR__.'/../../stubs/App/Http/Controllers/DashboardController.php', app_path('Http/Controllers/DashboardController.php'));
 
         // Tailwind / Webpack...
         copy(__DIR__.'/../../stubs/tailwind.config.js', base_path('tailwind.config.js'));
@@ -101,5 +111,22 @@ class InstallCommand extends Command
             base_path('package.json'),
             json_encode($packages, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT).PHP_EOL
         );
+    }
+    /**
+     * Install the service provider in the application configuration file.
+     *
+     * @param  string  $after
+     * @param  string  $name
+     * @return void
+     */
+    protected function installServiceProviderAfter($after, $name)
+    {
+        if (! Str::contains($appConfig = file_get_contents(config_path('app.php')), 'App\\Providers\\'.$name.'::class')) {
+            file_put_contents(config_path('app.php'), str_replace(
+                'App\\Providers\\'.$after.'::class,',
+                'App\\Providers\\'.$after.'::class,'.PHP_EOL.'        App\\Providers\\'.$name.'::class,',
+                $appConfig
+            ));
+        }
     }
 }
