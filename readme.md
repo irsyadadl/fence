@@ -20,5 +20,5 @@ Now, you can install fence by running this command:
 ```bash
 $ php artisan fence:install
 ```
-
+Now you make your database connection. And run `php artisan migrate`.
 Done.
