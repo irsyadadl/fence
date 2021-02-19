@@ -9,12 +9,13 @@
     ],
     "authors": [
         {
-            "name": "irsyadadl",
+            "name": "Irsyad A. Panjaitan",
             "email": "irsyad@parsinta.com"
         }
     ],
     "require": {
-        "illuminate/support": "^7.0|^8.0",
+        "php": "^7.3|^8.0",
+        "illuminate/support": "^8.0",
         "laravel/fortify": "^1.7"
     },
     "autoload": {
@@ -31,6 +32,9 @@
         "test": "vendor/bin/phpunit"
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "1.x"
+        },
         "laravel": {
             "providers": [
                 "Irsyadadl\\Fence\\FenceServiceProvider"
