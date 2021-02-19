@@ -78,9 +78,9 @@ class InstallCommand extends Command
         copy(__DIR__.'/../../stubs/FortifyServiceProvider.php', app_path('Providers/FortifyServiceProvider.php'));
 
         $this->info('🔥 Fence scaffolding installed successfully.');
-        $this->info('🔥 Please tell me if you like it');
-        $this->info('@irsyadadl');
-        $this->comment('Please execute the "yarn && yarn run dev" command to build your assets.');
+        // $this->info('🔥 Please tell me if you like it');
+        // $this->info('@irsyadadl');
+        $this->comment('‼️ Please execute the "yarn && yarn run dev" command to build your assets.');
     }
 
 
