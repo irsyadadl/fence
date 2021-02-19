@@ -38,7 +38,6 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        $this->call('vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"');
         $this->updateNodePackages(function ($packages) {
             return [
                 "alpinejs" => "^2.8.0",
