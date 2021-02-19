@@ -26,9 +26,6 @@
                 @auth
                 <ul class="flex flex-col lg:flex-row items-center">
                     <li class="lg:py-2 flex items-center justify-center">
-                        <div class="flex-shrink-0">
-                            <img src="{{ Auth::user()->gravatar() }}" alt="{{ Auth::user()->name }}" class="w-6 h-6 border rounded-full">
-                        </div>
                         <a class="px-4 py-2 block font-medium text-gray-400 focus:text-white hover:text-white" href="/profile">{{ Auth::user()->name }}</a>
                     </li>
                     <li class="lg:py-2">
@@ -74,10 +71,10 @@
                     <li>
                         <ul class="relative" x-data="{ down: false }">
                             <li @click.prevent="down = !down" class="lg:py-2 flex items-center">
-                                <div class="flex-shrink-0">
-                                    <img src="{{ Auth::user()->gravatar() }}" alt="{{ Auth::user()->name }}" class="w-6 h-6 border rounded-full">
-                                </div>
                                 <a class="px-4 py-2 block font-medium" href="#">{{ Auth::user()->name }}</a>
+                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
                             </li>
                             <li
                                 x-show="down"
@@ -91,13 +88,13 @@
                                 >
                                 <ul class="absolute w-56 right-0 border mr-4 -mt-2 py-2 rounded-lg bg-white">
                                     <li>
-                                        <a class="px-4 py-2 block font-medium" href="/user/profile">Profile</a>
+                                        <a class="px-4 py-2 block font-medium" href="/user/profile">Profile (NF)</a>
                                     </li>
                                     <li>
-                                        <a class="px-4 py-2 block font-medium" href="/user/update-profile">Update Profile</a>
+                                        <a class="px-4 py-2 block font-medium" href="/user/update-profile">Update Profile (NF)</a>
                                     </li>
                                     <li>
-                                        <a class="px-4 py-2 block font-medium" href="/user/update-password">Update Password</a>
+                                        <a class="px-4 py-2 block font-medium" href="/user/update-password">Update Password (NF)</a>
                                     </li>
                                     <li>
                                         <form action="/logout" method="post">
