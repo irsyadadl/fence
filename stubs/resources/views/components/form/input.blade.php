@@ -1,1 +1,1 @@
-<input {{ $attributes->merge(["class" => "text-gray-800 focus:ring focus:ring-blue-200 focus:border-blue-500 border-gray-300 rounded-lg w-full transition duration-150", "type" => "text"]) }}>
+<input {{ $attributes->merge(["class" => "text-gray-800 border-gray-300 rounded-lg w-full focus:border-violet-500 transition duration-200", "type" => "text"]) }}>

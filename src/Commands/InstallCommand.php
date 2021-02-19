@@ -38,9 +38,10 @@ class InstallCommand extends Command
      */
     public function handle()
     {
+        $this->call('vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"');
         $this->updateNodePackages(function ($packages) {
             return [
-                "alpinejs" => "^2.7.3",
+                "alpinejs" => "^2.8.0",
                 "postcss-import" => "^14.0.0",
                 "autoprefixer" => "^10.2.4",
                 "postcss" => "^8.2.6",
@@ -56,8 +57,8 @@ class InstallCommand extends Command
         // Tailwind / Webpack...
         copy(__DIR__.'/../../stubs/tailwind.config.js', base_path('tailwind.config.js'));
         copy(__DIR__.'/../../stubs/webpack.mix.js', base_path('webpack.mix.js'));
-        copy(__DIR__.'/../../stubs/resources/css/min.css', resource_path('css/min.css'));
-        copy(__DIR__.'/../../stubs/resources/js/min.js', resource_path('js/min.js'));
+        copy(__DIR__.'/../../stubs/resources/css/app.css', resource_path('css/app.css'));
+        copy(__DIR__.'/../../stubs/resources/js/app.js', resource_path('js/app.js'));
 
         // Blade...
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/resources/views/auth', resource_path('views/auth'));

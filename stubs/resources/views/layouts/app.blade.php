@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="{{ asset("css/app.css") }}">
 </head>
-<body class="antialiased">
-    {{ $slot }}
+<body class="antialiased text-gray-800">
+    @include('layouts._navbar')
+    <main class="mt-8">
+        {{ $slot }}
+    </main>
     <script src="{{ asset("js/app.js") }}"></script>
 </body>
 </html>

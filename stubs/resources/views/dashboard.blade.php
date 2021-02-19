@@ -1,3 +1,5 @@
 <x-layouts.app title="Dashboard">
-    Welcome
+    <div class="container mx-auto">
+        Dashboard
+    </div>
 </x-layouts.app>
