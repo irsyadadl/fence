@@ -29,7 +29,7 @@ class FenceServiceProvider extends ServiceProvider
             return;
         }
         $this->mergeConfigFrom(
-            __DIR__.'/../config/fence.php', 'app'
+            __DIR__.'/../config/fence.php', 'app.providers'
         );
 
         $this->publishes([
