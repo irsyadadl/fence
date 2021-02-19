@@ -13,6 +13,6 @@ $ composer require irsyadadl/fence
 ```
 Now, you can install fence by running this command:
 ```bash
-$ artisan vendor:publish
+$ artisan fence:install
 ```
 
