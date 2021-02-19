@@ -10,5 +10,9 @@ Fence is a package for authentication views using Laravel fortify package! It us
 ## Install
 ```bash
 $ composer require irsyadadl/fence
+```
+Now, you can install fence by running this command:
+```bash
 $ artisan vendor:publish
 ```
+
