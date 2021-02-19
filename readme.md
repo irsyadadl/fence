@@ -1,10 +1,10 @@
 <p align="center">
-    <img src="/art/logo.svg" alt="Logo Fence">
-    [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-    <a href="https://packagist.org/packages/irsyadadl/fence">
-        <img src="https://img.shields.io/packagist/v/irsyadadl/fence" alt="Latest Stable Version">
-    </a>
-    [![Total Downloads](https://img.shields.io/packagist/dt/irsyadadl/fence.svg?style=flat-square)](https://packagist.org/packages/irsyadadl/fence)
+<img src="/art/logo.svg" alt="Logo Fence">
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+<a href="https://packagist.org/packages/irsyadadl/fence">
+    <img src="https://img.shields.io/packagist/v/irsyadadl/fence" alt="Latest Stable Version">
+</a>
+[![Total Downloads](https://img.shields.io/packagist/dt/irsyadadl/fence.svg?style=flat-square)](https://packagist.org/packages/irsyadadl/fence)
 </p>
 ## Introduction
 Fence is a package for authentication views using Laravel fortify package! It using tailwind css!
