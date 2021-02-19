@@ -7,7 +7,12 @@
 ## Introduction
 Fence is a package for authentication views using Laravel fortify package! It using tailwind css!
 
-## Install
+> Hey, Make you sure you don't include `fence` into your existing app. Please add `fence` in your laravel new app. 
+### Install
+```bash
+$ laravel new app
+```
+And then you can install by composer like so:
 ```bash
 $ composer require irsyadadl/fence
 ```
@@ -16,3 +21,4 @@ Now, you can install fence by running this command:
 $ artisan fence:install
 ```
 
+Done.
