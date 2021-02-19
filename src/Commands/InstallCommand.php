@@ -62,6 +62,8 @@ class InstallCommand extends Command
 
         // Controller...
         copy(__DIR__.'/../../stubs/App/Http/Controllers/DashboardController.php', app_path('Http/Controllers/DashboardController.php'));
+        copy(__DIR__.'/../../stubs/App/Http/Controllers/HomeController.php', app_path('Http/Controllers/HomeController.php'));
+        copy(__DIR__.'/../../stubs/routes/web.php', base_path('routes/web.php'));
 
         // Tailwind / Webpack...
         copy(__DIR__.'/../../stubs/tailwind.config.js', base_path('tailwind.config.js'));
