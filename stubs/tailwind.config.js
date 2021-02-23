@@ -10,6 +10,7 @@ module.exports = {
 				gray: colors.coolGray,
 				cyan: colors.cyan,
 				lime: colors.lime,
+				blue: colors.blue,
 				green: colors.emerald,
 			},
 
