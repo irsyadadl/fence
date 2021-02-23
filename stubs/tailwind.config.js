@@ -6,10 +6,13 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {
+			container: {
+				center: true,
+				padding: '1rem',
+			},
+			
 			colors: {
 				gray: colors.coolGray,
-				cyan: colors.cyan,
-				lime: colors.lime,
 				blue: colors.blue,
 				green: colors.emerald,
 			},
