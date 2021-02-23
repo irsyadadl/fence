@@ -63,6 +63,7 @@ class InstallCommand extends Command
         // Controller...
         copy(__DIR__.'/../../stubs/App/Http/Controllers/DashboardController.php', app_path('Http/Controllers/DashboardController.php'));
         copy(__DIR__.'/../../stubs/App/Http/Controllers/HomeController.php', app_path('Http/Controllers/HomeController.php'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/App/Http/Controllers/Profile', app_path('Http/Controllers/Profile'));
         unlink(base_path('routes/web.php'));
         copy(__DIR__.'/../../stubs/routes/web.php', base_path('routes/web.php'));
 

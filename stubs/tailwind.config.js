@@ -10,13 +10,11 @@ module.exports = {
 				gray: colors.coolGray,
 				cyan: colors.cyan,
 				lime: colors.lime,
-				violet: colors.violet,
-				indigo: colors.indigo,
 				green: colors.emerald,
 			},
 
 			fontFamily: {
-				sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+				sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},
