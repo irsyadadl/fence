@@ -14,7 +14,7 @@
             <div class="text-center mb-5">
                 <a href="/">
                     <div class="inline-flex items-center">
-                        <svg class="w-12 h-12 text-violet-500" viewBox="0 0 364 364" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-12 h-12 text-blue-500" viewBox="0 0 364 364" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M364 182C364 282.516 282.516 364 182 364C81.4842 364 0 282.516 0 182C0 81.4842 81.4842 0 182 0C282.516 0 364 81.4842 364 182ZM68.6354 182C68.6354 244.61 119.39 295.365 182 295.365C244.61 295.365 295.365 244.61 295.365 182C295.365 119.39 244.61 68.6354 182 68.6354C119.39 68.6354 68.6354 119.39 68.6354 182Z" fill="currentColor"/>
                         </svg>
                     </div>
