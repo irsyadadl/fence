@@ -18,7 +18,7 @@ Fence is a package for authentication views using Laravel fortify package! It us
 > Hey, Make you sure you do not include `fence` into __your existing app__. Please add `fence` in your new laravel project.
 ### Install
 ```bash
-$ laravel new app
+laravel new app
 ```
 Next, you will need to install the [fortify package](https://github.com/laravel/fortify), it's required.
 
