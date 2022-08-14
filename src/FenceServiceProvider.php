@@ -3,8 +3,7 @@
 namespace Irsyadadl\Fence;
 
 use Illuminate\Support\ServiceProvider;
-use Irsyadadl\Fence\Commands\InstallCommand;
-use Laravel\Fortify\FortifyServiceProvider;
+use Irsyadadl\Fence\Console\InstallCommand;
 
 class FenceServiceProvider extends ServiceProvider
 {
@@ -33,7 +32,6 @@ class FenceServiceProvider extends ServiceProvider
             InstallCommand::class,
         ]);
     }
-
 
     /**
      * Get the services provided by the provider.

@@ -1,11 +1,12 @@
 {
     "name": "irsyadadl/fence",
-    "description": "Fence is a Laravel views for Laravel Fortify",
+    "description": " Fence is a package for authentication views using Laravel fortify package.",
     "type": "package",
     "license": "MIT",
     "keywords": [
         "laravel",
-        "fence"
+        "fence",
+        "fortify view"
     ],
     "authors": [
         {
@@ -14,9 +15,14 @@
         }
     ],
     "require": {
-        "php": "^7.3|^8.0",
-        "illuminate/support": "^8.0",
-        "laravel/fortify": "^1.7"
+        "php": "^8.0.2",
+        "illuminate/console": "^9.21",
+        "illuminate/filesystem": "^9.21",
+        "illuminate/support": "^9.21",
+        "illuminate/validation": "^9.21"
+    },
+    "conflict": {
+        "laravel/framework": "<9.19.0"
     },
     "autoload": {
         "psr-4": {
@@ -43,5 +49,10 @@
     },
     "require-dev": {
         "orchestra/testbench": "^6.0"
-    }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
