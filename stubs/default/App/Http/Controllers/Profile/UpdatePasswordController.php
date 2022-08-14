@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class UpdatePasswordController extends UpdateUserPassword
 {
+    /**
+     * Handle the incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function __invoke(Request $request)
     {
         $this->update($request->user(), $request->all());
