@@ -14,7 +14,7 @@
                     the button below.
                 </p>
                 <div class="mt-4">
-                    <a href="https://parsinta.com/s/elrvl?ref=package-fence"
+                    <a href="https://github.com/sponsors/irsyadadl"
                         class="items-center gap-x-2 focus:ring focus:ring-blue-100 focus:border-blue-300 inline-flex px-4 py-2 rounded-lg border shadow-sm bg-white">
                         🥳 Support me on Github
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
