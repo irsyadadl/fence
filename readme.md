@@ -41,15 +41,13 @@ Next, you will need to register `FortifyServiceProvider` in the `config/app.php`
 ],
 ```
 
-And now you can required this package like so:
+After that, we can start by installing the fence package like so:
 
 ```bash
 composer require irsyadadl/fence
 ```
-Now, you can install fence by running this command:
+When it's done, we can continue to install that boilerplate like this.
 ```bash
 php artisan fence:install
 ```
-Now you make your database connection. And run `php artisan migrate`.
-
-Done.
+And you're done, things you need to do next is configure your database connection so that you can run `php artisan migrate`.
