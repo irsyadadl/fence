@@ -23,7 +23,7 @@ laravel new app
 Next, you will need to install the [fortify package](https://github.com/laravel/fortify), it's required.
 
 ```bash
-composer require laravel/fortify
+composer require laravel/fortify --dev
 ```
 
 Next, publish Fortify's resources using the `vendor:publish` command:
