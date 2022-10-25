@@ -44,7 +44,7 @@ Next, you will need to register `FortifyServiceProvider` in the `config/app.php`
 After that, we can start by installing the fence package like so:
 
 ```bash
-composer require irsyadadl/fence
+composer require irsyadadl/fence --dev
 ```
 When it's done, we can continue to install that boilerplate like this.
 ```bash
