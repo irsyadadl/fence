@@ -6,12 +6,7 @@ use Illuminate\Filesystem\Filesystem;
 
 trait InstallsBladeStack
 {
-    /**
-     * Install the Blade Fence stack.
-     *
-     * @return void
-     */
-    protected function installBladeStack()
+    protected function installBladeStack(): void
     {
         // NPM Packages...
         $this->updateNodePackages(function ($packages) {

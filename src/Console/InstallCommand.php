@@ -13,52 +13,24 @@ class InstallCommand extends Command
 {
     use InstallsBladeStack;
 
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
     protected $signature = 'fence:install';
 
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
     protected $description = 'Install the Fence controllers and resources';
 
-    /**
-     * Execute the console command.
-     *
-     * @return int|null
-     */
-    public function handle()
+    public function handle(): int|null
     {
         $this->installBladeStack();
 
         return 1;
     }
 
-    /**
-     * Install Breeze's tests.
-     *
-     * @return void
-     */
-    protected function installTests()
+    protected function installTests(): void
     {
         (new Filesystem)->ensureDirectoryExists(base_path('tests/Feature'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/default/tests/Feature', base_path('tests/Feature/Auth'));
     }
 
-    /**
-     * Install the middleware to a group in the application Http Kernel.
-     *
-     * @param  string  $after
-     * @param  string  $name
-     * @param  string  $group
-     * @return void
-     */
-    protected function installMiddlewareAfter($after, $name, $group = 'web')
+    protected function installMiddlewareAfter($after, $name, $group = 'web'): void
     {
         $httpKernel = file_get_contents(app_path('Http/Kernel.php'));
 
@@ -80,13 +52,7 @@ class InstallCommand extends Command
         }
     }
 
-    /**
-     * Installs the given Composer Packages into the application.
-     *
-     * @param  mixed  $packages
-     * @return void
-     */
-    protected function requireComposerPackages($packages)
+    protected function requireComposerPackages($packages): void
     {
         $composer = $this->option('composer');
 
@@ -106,14 +72,7 @@ class InstallCommand extends Command
             });
     }
 
-    /**
-     * Update the "package.json" file.
-     *
-     * @param  callable  $callback
-     * @param  bool  $dev
-     * @return void
-     */
-    protected static function updateNodePackages(callable $callback, $dev = true)
+    protected static function updateNodePackages(callable $callback, $dev = true): void
     {
         if (! file_exists(base_path('package.json'))) {
             return;
@@ -136,12 +95,7 @@ class InstallCommand extends Command
         );
     }
 
-    /**
-     * Delete the "node_modules" directory and remove the associated lock files.
-     *
-     * @return void
-     */
-    protected static function flushNodeModules()
+    protected static function flushNodeModules(): void
     {
         tap(new Filesystem, function ($files) {
             $files->deleteDirectory(base_path('node_modules'));
@@ -151,36 +105,17 @@ class InstallCommand extends Command
         });
     }
 
-    /**
-     * Replace a given string within a given file.
-     *
-     * @param  string  $search
-     * @param  string  $replace
-     * @param  string  $path
-     * @return void
-     */
-    protected function replaceInFile($search, $replace, $path)
+    protected function replaceInFile($search, $replace, $path): void
     {
         file_put_contents($path, str_replace($search, $replace, file_get_contents($path)));
     }
 
-    /**
-     * Get the path to the appropriate PHP binary.
-     *
-     * @return string
-     */
-    protected function phpBinary()
+    protected function phpBinary(): string
     {
         return (new PhpExecutableFinder())->find(false) ?: 'php';
     }
 
-    /**
-     * Run the given commands.
-     *
-     * @param  array  $commands
-     * @return void
-     */
-    protected function runCommands($commands)
+    protected function runCommands($commands): void
     {
         $process = Process::fromShellCommandline(implode(' && ', $commands), null, null, null, null);
 

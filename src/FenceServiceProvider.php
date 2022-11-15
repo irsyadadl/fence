@@ -7,22 +7,12 @@ use Irsyadadl\Fence\Console\InstallCommand;
 
 class FenceServiceProvider extends ServiceProvider
 {
-    /**
-     * Register services.
-     *
-     * @return void
-     */
-    public function register()
+    public function register(): void
     {
         //
     }
 
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot()
+    public function boot(): void
     {
         if (! $this->app->runningInConsole()) {
             return;
@@ -33,12 +23,7 @@ class FenceServiceProvider extends ServiceProvider
         ]);
     }
 
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
+    public function provides(): array
     {
         return [InstallCommand::class];
     }
