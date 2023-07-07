@@ -51,3 +51,7 @@ When it's done, we can continue to install that boilerplate like this.
 php artisan fence:install
 ```
 And you're done, things you need to do next is configure your database connection so that you can run `php artisan migrate`.
+
+## Project supported by JetBrains
+- [Parsinta](https://parsinta.com)
+- [Karteil](https://karteil.com)
